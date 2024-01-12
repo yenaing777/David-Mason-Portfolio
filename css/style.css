@@ -1,0 +1,1224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #33bfee;
+    --dark-color: #161616;
+    --white-color: #ffffff;
+    --base-color: #898989;
+    --light-color: #F2F2F2;
+    --form-color: #232121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Button Class Start */
+
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Button Class End */
+
+/* Navigation Bar CSS Start */
+header {
+    background: var(--dark-color);
+    height: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 70% 87%,  0% 100%);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header .left-nav .logo {
+    margin-right: 3rem;
+}
+
+.nav-menu a{
+    color: var(--white-color);
+    text-decoration: none;
+    margin-right: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.nav-menu a:hover{
+    color: var(--primary-color);
+}
+
+
+/* Navigation Bar CSS End */
+
+/* Hero CSS Start */
+
+.hero {
+    padding: 5rem 0;
+    background: var(--dark-color);
+}
+
+.hero .hero-right img {
+    width: 400px;
+    margin-top: 3rem;
+}
+
+.hero .hero-right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.hero .hero-left {
+    color: var(--white-color);
+    flex: 1;
+}
+
+
+.hero .hero-left h6 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.hero .hero-left h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.text-animation h2:nth-child(1)  
+{
+    color: var(--dark-color);
+    text-shadow:
+    -1px -1px 0 var(--primary-color),
+    1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color),
+    1px 1px 0 var(--primary-color);
+    position: absolute;
+}
+
+.text-animation h2:nth-child(2)  
+{
+    color: var(--primary-color);
+    animation: water-animation 4s ease-in-out infinite;
+}
+
+
+.hero .hero-left p {
+    line-height: 1.9;
+    margin-bottom: 2rem; 
+}
+
+.hero .hero-right {
+    margin-top: -7rem;
+}
+
+/* Hero CSS End */
+
+/* About CSS Start */
+
+section {
+    padding: 3rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+section.about .about-img {
+    height: 450px;
+}
+
+.about-description h1 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.about-description h1 span {
+    color: var(--primary-color);
+}
+
+.about-description p {
+    font-family: 'Lato', sans-serif;
+    color: var(--base-color);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.about-description .social {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.social h4 {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+.about-description .social-links {
+    display: flex;
+}
+
+.about-description .social h5 {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    cursor: pointer;
+}
+
+.social-links .website a:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.social-links .twitter a:hover {
+    background-color: #000;
+    color: var(--white-color);
+}
+
+.social-links .facebook a:hover {
+    background-color: #1877F2;
+    color: var(--white-color);
+}
+
+.social-links .instagram a:hover {
+    background: linear-gradient(45deg, #8134AF, #E83E8C, #F24645, #FFD100);
+    color: var(--white-color);
+}
+
+.social-links .pinterest a:hover {
+    background-color: #E60023;
+    color: var(--white-color);
+}
+
+/* About CSS End */
+
+/* Skill CSS Start */
+
+.skill-section {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    height: auto;
+    clip-path: polygon(0% 0%, 30% 13%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.skill-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+  
+.skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.skill-title-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.section-title {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section-title span {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.section-text {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 1152px;
+    margin-bottom: 2rem;
+}
+
+.title-underline {
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 0.4rem;
+    margin-bottom: 2rem;
+}
+
+.skill-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1152px;
+}
+  
+.skill {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.skill-left, .skill-right {
+    background-color: var(--dark-color);
+    border: 5px solid var(--primary-color);
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 2rem 5rem;
+    color: var(--white-color);
+}
+  
+.skill h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+    font-weight: 400;
+}
+  
+.progress {
+    width: 400px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.progress-bar {
+    height: 100%;
+    line-height: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    width: 0;
+    transition: width 2s;
+}
+  
+.skill.html .progress-bar {
+    background-color: darkgreen;
+    animation: animateHTML 2s 0.5s forwards;
+}
+
+.skill.css .progress-bar {
+    background-color: #007BFF;
+    animation: animateCSS 2s 0.5s forwards;
+}
+  
+.skill.php .progress-bar {
+    background-color: #28A745;
+    animation: animatePHP 2s 0.5s forwards;
+}
+  
+.skill.js .progress-bar {
+    background-color: #FFC107;
+    animation: animateJavaScript 2s 0.5s forwards;
+}
+
+/* Skill CSS End */
+
+/* Freelance CSS Start */
+section.freelance {
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/camera.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--light-color);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 67% 80%,  0% 100%);
+    margin-bottom: 1rem;
+    
+}
+
+section.freelance h1 {
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+}
+
+section.freelance p {
+    margin-bottom: 1.5rem;
+    font-family: 'Lato',sans-serif;
+}
+
+section.freelance button {
+    margin-bottom: 1rem;
+}
+
+section.development {
+    margin-top: -2rem;
+}
+
+section.development .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+
+section.development .card-wrapper .card {
+    height: 200px;
+    border-radius: 25px;
+    border: 3px solid var(--primary-color);
+    background: var(--light-color);
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 8%;
+    position: relative;
+    z-index: 1;   
+    overflow: hidden;
+    transition: 0.6s;
+    margin-bottom: -2rem;
+}
+
+section.development .card-wrapper .card:after {
+    position: absolute;
+    content: "";
+    width: 8%;
+    height: 40%;
+    top: 30%;
+    right: -4%;
+    background: var(--dark-color);
+    z-index: -1;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+section.development .card-wrapper .card:hover {
+    color: var(--white-color);
+}
+
+section.development .card-wrapper .card:hover::after {
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+}
+
+section.development .card-wrapper .card h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+section.development .card ul li {
+    margin-left: 12px;
+    list-style: none;
+}
+
+section.development .card ul li i {
+    margin-right: 8px;
+}
+
+
+/* Freelance CSS End */
+
+/* Services CSS Start */
+
+.section-heading {
+    color: var(--dark-color);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 0.5;
+    font-weight: 400;
+}
+
+.section-heading span {
+    color: var(--primary-color);
+}
+
+.section-heading + p {
+    color: var(--dark-color);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+section.services {
+    background: var(--light-color);
+}
+
+section.services .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+
+section.services .card-wrapper .card {
+    background: var(--white-color);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 4.5rem;
+    text-align: center;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+section.services .card-wrapper .card .card-logo {
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-logo .card-icon {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+}
+
+section.services .card-wrapper .card h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem; 
+}
+
+section.services .card-wrapper .card p {
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+section.services .card-wrapper .card:hover {
+    background: var(--dark-color);
+    border: 3px solid var(--primary-color);
+}
+
+section.services .card-wrapper .card:hover h2,section.services .card-wrapper .card:hover p {
+    color: var(--white-color);
+}
+
+/* Services CSS End */
+
+/* Projects CSS Start */
+
+section.projects {
+    background: var(--white-color);
+}
+
+section.projects .section-heading {
+    margin-top: -1rem;
+}
+
+section.projects .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-top: -3rem;
+}
+
+section.projects .card {
+    position: relative;
+    height: 250px;
+}
+
+section.projects .card .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: var(--form-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light-color);
+    opacity: 0;
+    transition: all0.3s ease;
+}
+
+section.projects .card-wrapper .card:hover .card-overlay {
+    opacity: 1;
+}
+
+section.projects .card-wrapper .card:hover {
+    border: 3px solid var(--primary-color);
+}
+
+section.projects .card .card-overlay a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+section.projects .card img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Projects CSS End */
+
+/* Contact CSS Start */
+
+section.contact {
+    background: var(--dark-color);
+}
+
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+}
+
+.contact-wrapper {
+    color: var(--light-color);
+    max-width: 1152px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+    padding: 1rem;
+}
+
+.contact-line {
+    width: 2rem;
+    height: 2px;
+    margin-bottom: 1rem;
+    background: var(--primary-color);
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.contact-icon a {
+    color: var(--white-color);
+}
+
+.contact-icon.twitter:hover {
+    background-color: #000;
+    color: var(--white-color);
+}
+
+.contact-icon.facebook:hover {
+    background: #1877F2;
+    color: var(--white-color);
+}
+
+.contact-icon.instagram:hover {
+    background: linear-gradient(45deg, #8134AF, #E83E8C, #F24645, #FFD100);
+    color: var(--white-color);
+}
+
+.contact-icon.pinterest:hover {
+    background-color: #E60023;
+    color: var(--white-color);
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.contact-detail p {
+    font-size: 20px;
+    display: flex;
+    margin: 6px;
+}
+
+.social-contacts {
+    margin-top: 1rem;
+}
+
+.social-contacts h3 {
+    margin-bottom: .5rem;
+}
+
+.send-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--form-color);
+    box-shadow: 15px 14px 20px #000004;
+}
+
+.send-message .form-container {
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    max-width: 400px;
+    margin-top: 1rem;
+}
+
+.form-container label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: var(--light-color);
+}
+
+textarea {
+    resize: none;
+}
+
+button.submit {
+    margin-top: 1rem;
+    color: var(--white-color);
+}
+
+.contact span {
+    color: var(--primary-color);
+}
+
+/* Contact CSS End */
+
+/* Copyright CSS Start */
+footer {
+    margin-top: -2rem;
+}
+
+.copyright {
+    text-align: center;
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding-bottom: 1rem;
+}
+
+.copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Copyright CSS End */
+
+/* Go Top CSS Start */
+.go-back {
+   position: sticky;
+}
+
+#scrollToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+/* Go Top CSS End */
+
+/* Animation CSS Start */
+
+/* water wave effect */
+@keyframes water-animation {
+    0%, 100% {
+        clip-path: polygon(0 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0 100%);
+    }
+
+}
+
+/* Progress animations */
+@keyframes animateHTML {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 90%;
+    }
+}
+  
+@keyframes animateCSS {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 85%;
+    }
+}
+  
+@keyframes animatePHP {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80%;
+    }
+}
+  
+@keyframes animateJavaScript {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 15%;
+    }
+}
+
+/* Animation CSS End */
+
+/* Responsive CSS Start */
+
+.site-wrapper {
+    position: relative;
+}
+
+.hamberger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamberger img {
+    width: 30px;
+}
+
+.times {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.times img {
+    width: 25px;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    z-index: 1000;
+    background: var(--dark-color);
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in;
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    margin: 2rem 0;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.mobile-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+@media (min-width: 1025px) {
+    .hamberger{
+        display: none;
+    }
+}
+
+@media (max-width:1024px) {
+
+    header #main-nav {
+        display: none;
+    }
+
+    /* Hero Responsive Start */
+
+    .hero {
+        padding: 6rem 3rem 2rem 3rem;
+    }
+
+    .hero .hero-left h1 {
+        font-size: 1rem;
+    }
+
+    .hero .hero-left h6 {
+        font-size: 2.5rem;
+    }
+
+    .hero .hero-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .hero-left h2 {
+        font-size: 2rem;
+        margin-bottom: -1rem;
+    }
+
+    .hero .hero-left p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero .hero-right img {
+        width: 240px;
+        margin-top: 100px;
+    }
+    
+    .hero .hero-left .hero-button {
+        margin-bottom: 2rem;
+    }
+
+    .hero .hero-left .btn {
+        padding: 0.7rem 1rem;
+        font-size: 14px;
+    }
+
+    header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 88%,  0% 100%);
+    }
+
+    section.about {
+        margin-top: -3rem;
+    }
+
+    section.about .about-img {
+        height: 360px;
+    }
+
+    .social h4 {
+        margin-bottom: 0;   
+    }
+
+    section.about .about-description {
+        margin-top: 1.5rem;
+    }
+
+    section.about .about-description p {
+        margin-bottom: 1rem;
+    }
+
+    .responsive-remove {
+        display: none;
+    }
+    /* Hero Responsive End */
+
+    /* Skill Responsive Start */
+
+    section.skill-section {
+        margin-top: -2rem;
+    }
+
+    .skill-title-wrap {
+        margin-top: -3rem;
+    }
+
+    .skill-section {
+        clip-path: polygon(0% 0%, 20% 8%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .responsive-text{
+        width: 90%;
+    }
+
+    .skill-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 95%;
+    }
+
+    /* Skill Responsive End */
+
+    /* Freelance Responsive Start */
+
+    section.development .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 4rem;
+    }
+
+    section.development .card-wrapper .card {
+        height: 150px;
+        padding: 3rem 8%;
+       display: flex;
+       justify-content: center;
+    }
+
+    section.freelance h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+     
+     section.freelance p {
+         margin-bottom: 1rem;
+         font-family: 'Lato',sans-serif;
+    }
+
+    section.development {
+        margin-bottom: -3rem;
+    }
+
+    /* Freelance Responsive End */
+
+    /* Services Responsive Start */
+
+    section.services .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Services Responsive End */
+
+    /* Projects Responsive Start */
+
+    section.projects .card-wrapper {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1.5rem;
+        margin-top: -4rem;
+    }
+
+    /* Projects Responsive End */
+
+    /* Contact Responsive Start */
+
+    .contact-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1rem;
+    }
+
+    .send-message h3 {
+        margin-top: 1rem;
+    }
+
+    .form-container button {
+        margin-bottom: 1rem;
+    }
+    
+    /* Contact Responsive End */  
+}
+
+@media (max-width: 576px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+      }
+
+    /* Hero Responsive Start */
+
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        top: 2rem;
+    }
+
+    .hero .hero-left {
+        position: absolute;
+        padding: 0 1rem;      
+    }
+
+    .hero .hero-left h6 {
+        font-size: 1.2rem;
+    }
+
+    header {
+        height: auto;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 92%,  0% 100%);
+    }
+
+    .hero .hero-right img {
+        margin-left: 100px;
+    }
+    /* Hero Responsive End */
+
+    /* About Responsive Start */
+
+    .about-inner-wrap {
+        flex-direction: column;
+    }
+
+    section.about .right {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    section.about .about-description .social {
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .about-description .social .social-links {
+        margin-top: 1rem;
+    }
+
+    /* About Responsive End */
+
+    /* Skill Responsive Start */
+
+    .skill-section {
+        clip-path: polygon(0% 0%, 20% 5%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .skill-title-wrap {
+        margin-top: -4rem;
+    }
+
+    .responsive-text{
+        width: 70%;
+    }
+
+    .skill-left, .skill-right {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .progress {
+        width: 300px;
+        height: 10px;
+        border-radius: 10px;
+        position: relative;
+    } 
+
+    /* Skill Responsive End */
+
+    /* Services Responsive Start */
+
+    section.services .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section.services .card-wrapper .card {
+        padding: 3rem 2rem;
+    }
+
+    /* Services Responsive End */
+
+    /* Projects Responsive Start */
+
+    section.projects .card-wrapper {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 2rem;
+        margin-top: -4rem;
+    }
+
+    /* Projects Responsive End */
+
+     /* Form Responsive Start */
+
+    .send-message {
+       padding: 0 1.5rem; 
+    }
+
+    /* Form Responsive End */
+
+}
+/* Responsive CSS End */
